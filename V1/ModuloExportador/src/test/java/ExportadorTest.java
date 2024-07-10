@@ -2,15 +2,11 @@ import Exportadores.AdapterApachePDFBox;
 import Exportadores.ExportarAExcel;
 import ModuloExportador.Exportable;
 import ModuloExportador.Documento;
-import PDFexport.AdapterPDFBox;
 import PDFexport.ExportarPDF;
 import config.Config;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ExportadorTest {
     private Exportable exp;
@@ -34,7 +30,7 @@ public class ExportadorTest {
      @Test
     public void exportarPDF(){
          this.doc.agregarDatos("1","oo","ee","123");
-         this.exp = new Exportable(this.doc, new ExportarPDF(new AdapterPDFBox(new AdapterApachePDFBox("datos.pdf"))));
+         this.exp = new Exportable(this.doc, new ExportarPDF(new AdapterApachePDFBox("datos.pdf")));
          Assert.assertEquals(Config.RUTA_EXPORTACION+"datos.pdf",this.exp.exportar((doc)));
 
      }
