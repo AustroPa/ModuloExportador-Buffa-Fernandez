@@ -12,9 +12,7 @@ public class Exportable {
         this.estrategia = estrategia;
     }
 
-    public void elegirEstrategia(ExportarEstrategia estrategia){
-        this.estrategia = estrategia;
-    }
+
 
 
     public String exportar(Documento documento){
