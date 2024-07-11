@@ -22,14 +22,14 @@ public class ExportadorTest {
 
      @Test
     public void exportarExel(){
-         this.doc.agregarDatos("1","pepe","perez","23");
+         this.doc.agregarDatos("1","pep","pere","29");
          this.exp.setDocumento(this.doc);
          Assert.assertEquals(Config.RUTA_EXPORTACION+"datos.xlsx",this.exp.exportar((doc)));
      }
 
      @Test
     public void exportarPDF(){
-         this.doc.agregarDatos("1","oo","ee","123");
+         this.doc.agregarDatos("1","ooo","eee","3");
          this.exp = new Exportable(this.doc, new ExportarPDF(new AdapterApachePDFBox("datos.pdf")));
          Assert.assertEquals(Config.RUTA_EXPORTACION+"datos.pdf",this.exp.exportar((doc)));
 
